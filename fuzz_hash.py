@@ -103,7 +103,7 @@ class file_fuzzer:
 		self.running = True
 		self.dbg	 = pydbg()
 		self.dbg.set_callback(EXCEPTION_ACCESS_VIOLATION,self.check_accessv)
-		pid = self.dbg.load(self.exe_path, "--play " + "C:\\Users\\YoungJoo\\Desktop\\Fuzzing\\teamviewer\\fuzz2\\" + self.copyfile+self.ext)
+		pid = self.dbg.load(self.exe_path, "--play " + "C:\\Users\\Administrator\\Desktop\\TV_FILE_FUZZER-master\\" + self.copyfile+self.ext)
 
 		self.pid = self.dbg.pid
 		self.dbg.run()
@@ -224,7 +224,7 @@ class file_fuzzer:
 		copy_fd.close()
 		print self.copyfile + self.ext
 
-		passs = "C:\\Users\\YoungJoo\\Desktop\\Fuzzing\\teamviewer\\fuzz2\\"
+		passs = "C:\\Users\\Administrator\\Desktop\\TV_FILE_FUZZER-master\\"
 
 		os.system("tmp\\radamsa.exe " +passs+ self.copyfile+self.ext + "1"+ " " + "> " +passs+ self.copyfile+self.ext)
 
